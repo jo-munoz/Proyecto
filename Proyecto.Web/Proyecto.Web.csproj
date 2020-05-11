@@ -77,6 +77,8 @@
     <Content Include="js\sb-admin.js" />
     <Content Include="js\sb-admin.min.js" />
     <Content Include="js\sweetalert.min.js" />
+    <Content Include="Recursos\Images\icon_delete.png" />
+    <Content Include="Recursos\Images\icon_edit.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -117,7 +119,7 @@
     <Content Include="vendor\jquery\jquery.slim.min.js" />
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
-    <Content Include="Views\PosiblesClientes\PoriblesClientes.aspx" />
+    <Content Include="Views\PosiblesClientes\PosiblesClientes.aspx" />
     <Content Include="Views\Registrar\Registrar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -146,12 +148,12 @@
     <Compile Include="Views\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\PosiblesClientes\PoriblesClientes.aspx.cs">
-      <DependentUpon>PoriblesClientes.aspx</DependentUpon>
+    <Compile Include="Views\PosiblesClientes\PosiblesClientes.aspx.cs">
+      <DependentUpon>PosiblesClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\PosiblesClientes\PoriblesClientes.aspx.designer.cs">
-      <DependentUpon>PoriblesClientes.aspx</DependentUpon>
+    <Compile Include="Views\PosiblesClientes\PosiblesClientes.aspx.designer.cs">
+      <DependentUpon>PosiblesClientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Registrar\Registrar.aspx.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>

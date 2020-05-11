@@ -1,12 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Data;
 
 namespace Proyecto.Web.Controllers
 {
     public class PosiblesClientesControllers
     {
-        //VIDEO 3 MINUTO 21:22
+        /// <summary>
+        /// OBTIENE REGISTROS POSIBLES CLIENTES
+        /// </summary>
+        /// <returns>DATA POSIBLES CLIENTES</returns>
+        public DataSet getConsultarPosiblesClientesController()
+        {
+            try
+            {
+                Logica.BL.clsPosiblesClientes obclsPosiblesClientes = new Logica.BL.clsPosiblesClientes();
+                return obclsPosiblesClientes.getConsultarPosiblesClientes();
+            }
+            catch(Exception ex) { throw ex; }
+        }
+
+        /// <summary>
+        /// ADMINISTRA POSIBLES CLIENTES
+        /// </summary>
+        /// <param name="obclsPosiblesClientesModels">OBJETO</param>
+        /// <param name="inOpcion">OPCION DE EJECUCION</param>
+        /// <returns>MENSAJE DE PROCESO</returns>
+        public string setAdministrarPosiblesClientesController(Logica.Models.clsPosiblesClientes obclsPosiblesClientesModels,
+                                                                int inOpcion)
+        {
+            try
+            {
+                Logica.BL.clsPosiblesClientes obclsPosiblesClientes = new Logica.BL.clsPosiblesClientes();
+                return obclsPosiblesClientes.getAdministrarPosiblesClientes(obclsPosiblesClientesModels,
+                                                                                inOpcion);
+            }
+            catch (Exception ex) { throw ex; }
+        }
     }
 }

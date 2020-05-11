@@ -54,7 +54,7 @@
                     <asp:Button ID="btnLogin" runat="server" class="btn btn-primary btn-block" Text="Ingresar" OnClick="btnLogin_Click" />
                 </form>
                 <div class="text-center">
-                    <a class="d-block small mt-3" href="#">Registrar Cuenta</a>
+                    <a class="d-block small mt-3" href="../Registrar/Registrar.aspx">Registrar Cuenta</a>
                     <a class="d-block small" href="#">Olvido Password?</a>
                 </div>
             </div>

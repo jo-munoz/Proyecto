@@ -10,16 +10,16 @@
 namespace Proyecto.Web.Views.PosiblesClientes {
     
     
-    public partial class PoriblesClientes {
+    public partial class PosiblesClientes {
         
         /// <summary>
-        /// Control lblSubtitulo.
+        /// Control lblOpcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSubtitulo;
+        protected global::System.Web.UI.WebControls.Label lblOpcion;
         
         /// <summary>
         /// Control lblIdentificacion.
@@ -209,5 +209,14 @@ namespace Proyecto.Web.Views.PosiblesClientes {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblResultado;
+        
+        /// <summary>
+        /// Control gvwDatos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwDatos;
     }
 }
