@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="BL\clsConexion.cs" />
     <Compile Include="BL\clsEstadoTarea.cs" />
+    <Compile Include="BL\clsGeneral.cs" />
     <Compile Include="BL\clsPosiblesClientes.cs" />
     <Compile Include="BL\clsPrioridad.cs" />
     <Compile Include="BL\clsUsuarios.cs" />

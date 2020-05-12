@@ -123,6 +123,7 @@
     <Content Include="Views\Index\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\PosiblesClientes\PosiblesClientes.aspx" />
+    <Content Include="Views\RecuperarPassword\RecuperarPassword.aspx" />
     <Content Include="Views\Registrar\Registrar.aspx" />
     <Content Include="Views\Tareas\Tareas.aspx" />
     <Content Include="Web.config">
@@ -161,6 +162,13 @@
     </Compile>
     <Compile Include="Views\PosiblesClientes\PosiblesClientes.aspx.designer.cs">
       <DependentUpon>PosiblesClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecuperarPassword\RecuperarPassword.aspx.cs">
+      <DependentUpon>RecuperarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\RecuperarPassword\RecuperarPassword.aspx.designer.cs">
+      <DependentUpon>RecuperarPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Registrar\Registrar.aspx.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>

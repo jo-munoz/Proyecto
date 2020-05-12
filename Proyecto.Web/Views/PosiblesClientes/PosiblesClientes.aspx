@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="contenedor" runat="server">
 
     <h1 class="text-center">Posibles Clientes</h1>
-    <hr />
+    <hr class="mb-3" />
 
     <div class="form-group" style="display:none"> 
         <div class="form-row">

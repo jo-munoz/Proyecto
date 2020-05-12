@@ -15,7 +15,6 @@ namespace Proyecto.Web.Recursos.Template
                     stEmail = Session["sessionEmail"].ToString().Split('@');
                     lblUsuario.Text = stEmail[0];
                 }
-
                 else
                 {
                     Response.Redirect("../../Views/Login/Login.aspx");

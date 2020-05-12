@@ -10,9 +10,9 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
     <h1 class="text-center">Información sobre la Tarea</h1>
-    <hr />
+    <hr class="mb-3" />
 
-    <div class="card mx-auto mt-5">
+    <div class="card mx-auto mb-3">
         <div class="card-header">Crear Tareas</div>
         <div class="card-body">
 

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Proyecto.Web.Views.Index
 {
@@ -11,7 +6,10 @@ namespace Proyecto.Web.Views.Index
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["sessionEmail"] == null)
+            {
+                Response.Redirect("../Login/Login.aspx");
+            }            
         }
     }
 }
