@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Proyecto.Web.Views.Login
 {
@@ -52,6 +47,7 @@ namespace Proyecto.Web.Views.Login
                 //Valido respuesta
                 if (blBandera)
                 {
+                    Session["sessionEmail"] = txtEmail.Text;
                     Response.Redirect("../Index/Index.aspx");
                 }
                 else

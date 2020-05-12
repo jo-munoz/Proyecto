@@ -3,5 +3,6 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenedor" runat="server">
-    <h1>Index</h1>
+    <h1 class="text-center">Index</h1>
+    <hr />
 </asp:Content>

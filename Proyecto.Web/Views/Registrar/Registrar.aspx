@@ -64,8 +64,8 @@
                     <asp:Button ID="btnLogin" runat="server" class="btn btn-primary btn-block" Text="Registrar" />
                 </form>
                 <div class="text-center">
-                    <a class="d-block small mt-3" href="../Login/Login.aspx">Login Page</a>
-                    <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+                    <a class="d-block small mt-3" href="../Login/Login.aspx">Iniciar Sesión</a>
+                    <a class="d-block small" href="forgot-password.html">Olvido Password?</a>
                 </div>
             </div>
         </div>
