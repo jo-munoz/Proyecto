@@ -108,7 +108,9 @@ namespace Proyecto.Web.Views.PosiblesClientes
             }
             catch (Exception ex)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + ex.Message + "', 'error')</script>");
+                Logica.BL.clsGeneral obclsGeneral = new Logica.BL.clsGeneral();
+                string stError = obclsGeneral.Log(ex.Message.ToString());
+                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + stError + "', 'error')</script>");
             }
         }
 
@@ -164,7 +166,9 @@ namespace Proyecto.Web.Views.PosiblesClientes
             }
             catch (Exception ex)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + ex.Message + "', 'error')</script>");
+                Logica.BL.clsGeneral obclsGeneral = new Logica.BL.clsGeneral();
+                string stError = obclsGeneral.Log(ex.Message.ToString());
+                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + stError + "', 'error')</script>");
             }
         }
 
@@ -176,7 +180,9 @@ namespace Proyecto.Web.Views.PosiblesClientes
             }
             catch (Exception ex)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + ex.Message + "', 'error')</script>");
+                Logica.BL.clsGeneral obclsGeneral = new Logica.BL.clsGeneral();
+                string stError = obclsGeneral.Log(ex.Message.ToString());
+                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + stError + "', 'error')</script>");
             }
         }
         #endregion

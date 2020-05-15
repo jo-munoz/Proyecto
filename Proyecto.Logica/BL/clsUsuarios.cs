@@ -55,5 +55,43 @@ namespace Proyecto.Logica.BL
             catch (Exception ex) { throw ex; }
             finally { _SqlCommand.Clone(); }
         }
+
+        /// <summary>
+        /// CREAR CUENTA DE USUARIO
+        /// </summary>
+        /// <param name="obclsUsuarios"></param>
+        /// <returns>MENSAJE DE BASE DE DATOS</returns>
+        public string setCrearCuenta(Logica.Models.clsUsuarios obclsUsuarios, 
+                                        int inOpcion)
+        {
+            try
+            {
+                DataSet dsConsulta = new DataSet();
+
+                _SqlConnection = new SqlConnection(stConexion);
+                _SqlConnection.Open();
+
+                _SqlCommand = new SqlCommand("spAdministrarUsuarios", _SqlConnection);
+                _SqlCommand.CommandType = CommandType.StoredProcedure;
+
+                _SqlCommand.Parameters.Add(new SqlParameter("@cLogin", obclsUsuarios.stLogin));
+                _SqlCommand.Parameters.Add(new SqlParameter("@cPassword", obclsUsuarios.stPassword));
+                _SqlCommand.Parameters.Add(new SqlParameter("@cImagen", obclsUsuarios.stImagen));
+                _SqlCommand.Parameters.Add(new SqlParameter("@nOpcion", inOpcion));
+
+                _SqlParameter = new SqlParameter();
+                _SqlParameter.ParameterName = "@cMensaje";
+                _SqlParameter.Direction = ParameterDirection.Output;
+                _SqlParameter.SqlDbType = SqlDbType.VarChar;
+                _SqlParameter.Size = 50;
+
+                _SqlCommand.Parameters.Add(_SqlParameter);
+                _SqlCommand.ExecuteNonQuery();
+
+                return _SqlParameter.Value.ToString();
+            }
+            catch (Exception ex) { throw ex; }
+            finally { _SqlCommand.Clone(); }
+        }
     }
 }

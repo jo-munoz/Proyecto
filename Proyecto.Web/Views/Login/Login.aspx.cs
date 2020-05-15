@@ -22,21 +22,10 @@ namespace Proyecto.Web.Views.Login
             try
             {
                 string stMensaje = string.Empty;
+                if (string.IsNullOrEmpty(txtEmail.Text)) stMensaje += "Ingrese email, ";
+                if (string.IsNullOrEmpty(txtPassword.Text)) stMensaje += " Ingrese password,";
 
-                if (string.IsNullOrEmpty(txtEmail.Text))
-                {
-                    stMensaje += "Ingrese email, ";
-                }
-
-                if (string.IsNullOrEmpty(txtPassword.Text))
-                {
-                    stMensaje += " Ingrese password,";
-                }
-
-                if (!string.IsNullOrEmpty(stMensaje))
-                {
-                    throw new Exception(stMensaje.TrimEnd(','));
-                }
+                if (!string.IsNullOrEmpty(stMensaje)) throw new Exception(stMensaje.TrimEnd(','));
 
                 //Defino objeto con propiedades
                 Logica.Models.clsUsuarios obclsUsuarios = new Logica.Models.clsUsuarios
@@ -80,7 +69,9 @@ namespace Proyecto.Web.Views.Login
             }
             catch (Exception ex)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + ex.Message + "', 'error')</script>");
+                Logica.BL.clsGeneral obclsGeneral = new Logica.BL.clsGeneral();
+                string stError = obclsGeneral.Log(ex.Message.ToString());
+                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!', '" + stError + "', 'error')</script>");
             }
         }
         #endregion

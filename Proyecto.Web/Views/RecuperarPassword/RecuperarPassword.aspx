@@ -26,6 +26,10 @@
 
     <!-- Core plugin JavaScript-->
     <script src="../../vendor/jquery-easing/jquery.easing.min.js" type="text/javascript"></script>
+
+    <!-- bootstrap-sweetalert-->
+    <link href="../../css/sweetalert.css" rel="stylesheet" />
+    <script src="../../js/sweetalert.min.js" type="text/javascript"></script>
 </head>
 <body class="bg-dark">
 
@@ -48,7 +52,7 @@
                     </div>
 
                     <div class="text-center">
-                        <asp:Button ID="btnAceptar" runat="server" class="btn btn-primary" Text="Recuperar Password"></asp:Button>
+                        <asp:Button ID="btnAceptar" runat="server" class="btn btn-primary" Text="Recuperar Password" OnClick="btnAceptar_Click" ></asp:Button>
                     </div>
 
                     <div class="text-center">

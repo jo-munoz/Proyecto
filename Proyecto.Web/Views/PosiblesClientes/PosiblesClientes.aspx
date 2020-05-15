@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Recursos/Template/Template.Master" AutoEventWireup="true" CodeBehind="PosiblesClientes.aspx.cs" Inherits="Proyecto.Web.Views.PosiblesClientes.PosiblesClientes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Resources/Template/Template.Master" AutoEventWireup="true" CodeBehind="PosiblesClientes.aspx.cs" Inherits="Proyecto.Web.Views.PosiblesClientes.PosiblesClientes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="../../js/sweetalert.min.js" type="text/javascript"></script>
@@ -6,7 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenedor" runat="server">
 
-    <h1 class="text-center">Posibles Clientes</h1>
+    <h1 class="text-center mt-3">Posibles Clientes</h1>
     <hr class="mb-3" />
 
     <div class="form-group" style="display:none"> 
@@ -92,7 +92,8 @@
                     Width="100%"
                     AutoGenerateColumns="False"
                     EmptyDataText="No se encontraron registros" 
-                    BackColor="White" BorderColor="#999999" 
+                    BackColor="#EEEEEE"
+                    BorderColor="#999999" 
                     BorderStyle="None" 
                     BorderWidth="1px" 
                     CellPadding="3" 
@@ -118,14 +119,14 @@
                         <%-- EDITAR --%>
                         <asp:TemplateField HeaderText="Editar">
                             <ItemTemplate>
-                                <asp:ImageButton ID="ibEditar" runat="server" ImageUrl="~/Recursos/Images/icon_edit.png" CommandName="Editar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" Height="25px" />
+                                <asp:ImageButton ID="ibEditar" runat="server" ImageUrl="~/Resources/Images/icon_edit.png" CommandName="Editar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" Height="25px" />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>
                         <%-- ELIMINAR --%>
                         <asp:TemplateField HeaderText="Eliminar">
                             <ItemTemplate>
-                                <asp:ImageButton ID="ibEliminar" runat="server" ImageUrl="~/Recursos/Images/icon_delete.png" CommandName="Eliminar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" Height="25px" />
+                                <asp:ImageButton ID="ibEliminar" runat="server" ImageUrl="~/Resources/Images/icon_delete.png" CommandName="Eliminar" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" Height="25px" />
                             </ItemTemplate>
                             <ItemStyle HorizontalAlign="Center" />
                         </asp:TemplateField>

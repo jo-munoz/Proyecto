@@ -4,6 +4,7 @@ namespace Proyecto.Web.Recursos.Template
 {
     public partial class Template : System.Web.UI.MasterPage
     {
+        #region Eventos
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -19,6 +20,9 @@ namespace Proyecto.Web.Recursos.Template
                 {
                     Response.Redirect("../../Views/Login/Login.aspx");
                 }
+
+                //ALT + 126
+                imgUsuario.ImageUrl = "~/Images/" + Session["sessionEmail"].ToString() + ".jpg";
             }
         }
 
@@ -27,5 +31,6 @@ namespace Proyecto.Web.Recursos.Template
             Session.RemoveAll();
             Response.Redirect("../../Views/Login/Login.aspx");
         }
+        #endregion
     }
 }
