@@ -142,10 +142,13 @@
     <Content Include="Views\PosiblesClientes\PosiblesClientes.aspx" />
     <Content Include="Views\RecuperarPassword\RecuperarPassword.aspx" />
     <Content Include="Views\Tareas\Tareas.aspx" />
-    <Content Include="Web References\wsServicios\Reference.map">
+    <Content Include="Web References\wsServicios\clsEventos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\wsServicios\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Web References\wsServicios\wsServicios.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
