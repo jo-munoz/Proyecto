@@ -12,6 +12,9 @@
         <EntityTypeShape EntityType="bdGeneralModel.tbUsuarios" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="bdGeneralModel.FK_tbTareas_tbEstadoTareas" ManuallyRouted="false" />
         <AssociationConnector Association="bdGeneralModel.FK_tbTareas_tbPrioridad" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="bdGeneralModel.tbEventos" Width="1.5" PointX="7.625" PointY="5" />
+        <EntityTypeShape EntityType="bdGeneralModel.tbRelacionadoCon" Width="1.5" PointX="5.375" PointY="5.5" />
+        <AssociationConnector Association="bdGeneralModel.FK_tbEventos_tbRelacionadoCon" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
