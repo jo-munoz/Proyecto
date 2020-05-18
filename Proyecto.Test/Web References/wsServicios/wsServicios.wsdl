@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getEventos_Json">
+        <s:complexType />
+      </s:element>
+      <s:element name="getEventos_JsonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEventos_JsonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEventos_XML">
+        <s:complexType />
+      </s:element>
+      <s:element name="getEventos_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEventos_XMLResult" type="tns:ArrayOfClsEventos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsEventos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clsEventos" nillable="true" type="tns:clsEventos" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsEventos">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMBRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UBICACION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PARTICIPANTES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TODO_DIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FECHA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RELACIONADO_CON" type="tns:clsRelacionadoCon" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsRelacionadoCon">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CODIGO" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRIPCION" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="createEventosWS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stclsEventos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createEventosWSResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getEventos_JsonSoapIn">
+    <wsdl:part name="parameters" element="tns:getEventos_Json" />
+  </wsdl:message>
+  <wsdl:message name="getEventos_JsonSoapOut">
+    <wsdl:part name="parameters" element="tns:getEventos_JsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEventos_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getEventos_XML" />
+  </wsdl:message>
+  <wsdl:message name="getEventos_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getEventos_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="createEventosWSSoapIn">
+    <wsdl:part name="parameters" element="tns:createEventosWS" />
+  </wsdl:message>
+  <wsdl:message name="createEventosWSSoapOut">
+    <wsdl:part name="parameters" element="tns:createEventosWSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsServiciosSoap">
+    <wsdl:operation name="getEventos_Json">
+      <wsdl:input message="tns:getEventos_JsonSoapIn" />
+      <wsdl:output message="tns:getEventos_JsonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventos_XML">
+      <wsdl:input message="tns:getEventos_XMLSoapIn" />
+      <wsdl:output message="tns:getEventos_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createEventosWS">
+      <wsdl:input message="tns:createEventosWSSoapIn" />
+      <wsdl:output message="tns:createEventosWSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsServiciosSoap" type="tns:wsServiciosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getEventos_Json">
+      <soap:operation soapAction="http://tempuri.org/getEventos_Json" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventos_XML">
+      <soap:operation soapAction="http://tempuri.org/getEventos_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createEventosWS">
+      <soap:operation soapAction="http://tempuri.org/createEventosWS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsServiciosSoap12" type="tns:wsServiciosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getEventos_Json">
+      <soap12:operation soapAction="http://tempuri.org/getEventos_Json" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventos_XML">
+      <soap12:operation soapAction="http://tempuri.org/getEventos_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createEventosWS">
+      <soap12:operation soapAction="http://tempuri.org/createEventosWS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsServicios">
+    <wsdl:port name="wsServiciosSoap" binding="tns:wsServiciosSoap">
+      <soap:address location="http://localhost/Proyecto.Ws/Servicios/wsServicios.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsServiciosSoap12" binding="tns:wsServiciosSoap12">
+      <soap12:address location="http://localhost/Proyecto.Ws/Servicios/wsServicios.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

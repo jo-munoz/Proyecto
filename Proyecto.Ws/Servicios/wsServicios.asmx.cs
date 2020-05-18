@@ -28,5 +28,14 @@ namespace Proyecto.Ws.Servicios
             Logica.BL.clsEventos obclsEventos = new Logica.BL.clsEventos();
             return obclsEventos.getEventos();
         }
+
+        [WebMethod]
+        public void createEventosWS(string stclsEventos)
+        {
+            Logica.BL.clsEventos obclsEvento = new Logica.BL.clsEventos();
+            Logica.Models.clsEventos obclsEventos = JsonConvert.DeserializeObject<Logica.Models.clsEventos>(stclsEventos);
+
+            obclsEvento.createEventos(obclsEventos);
+        }
     }
 }
